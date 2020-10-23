@@ -8,6 +8,9 @@ const bouncer = require('koa-bouncer');
 const router = require('koa-router')();
 const MQ_KEY = require('./secrets').mapquest_key;
 const axios = require('axios');
+const serve = require('koa-static');
+const path = require('path');
+
 
 app.use(helmet());
 app.use(compress());
@@ -15,6 +18,13 @@ app.use(logger());
 app.use(bodyParser());
 app.use(bouncer.middleware())
 app.use(require('./middleware/preact-render')());
+app.use(serve(__dirname + "/dist"));
+
+
+router.get('/', (ctx,next) => {
+    ctx.type = 'html';
+    ctx.body = ctx.render();
+})
 
 router.get("/location/:zip", async (ctx, next) => {
     console.log(ctx.params);

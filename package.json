@@ -2,6 +2,11 @@
   "name": "VotingProj",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start:client": "webpack -w",
+    "start:server": "babel-node server.js",
+    "dev": "yarn run start:client & yarn run start:server"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.20.0",
@@ -14,8 +19,21 @@
     "koa-logger": "^3.2.1",
     "koa-route": "^3.2.0",
     "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0",
+    "linkstate": "^1.1.1",
     "preact": "^10.5.2",
     "preact-render-to-string": "^5.1.10",
     "server.js": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
