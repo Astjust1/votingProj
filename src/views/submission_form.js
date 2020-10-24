@@ -17,19 +17,26 @@ export default class SubmissionForm extends Component {
 
     render({},{email, address}) {
         return(
-            <div>
                 <form style={{
                 alignItems: 'center',
                 flexDirection: 'column',
                 justifyContent: 'center',
-                display: 'flex'
-            }}>
-                    <label for={'email'}> What's your email?</label>
-                    <input id={'email'} type={'email'} value={email} onInput={linkstate(this,'email')} placeholder={'abc@example.com'}/>
-                    <label for={'address'}> What's your home address?</label>
-                    <input id={'address'} type={'text'} value={address} onInput={linkstate(this,'address')} placeholder={'57 Chicken Rd, Los Angles CA, 11111'}/>
+                display: 'flex',
+                border:'1px solid',
+                borderRadius:'16px',
+                height: "25%",
+                width: "60%",
+                boxShadow:'5px 10px 18px #888888',
+            }}> 
+                    <div>
+                        <label for={'email'}> What's your email?</label>
+                        <input id={'email'} type={'email'} value={email} onInput={linkstate(this,'email')} placeholder={'abc@example.com'}/>
+                    </div>
+                    <div>
+                        <label for={'address'}> What's your home address?</label>
+                        <input id={'address'} type={'text'} value={address} onInput={linkstate(this,'address')} placeholder={'57 Chicken Rd, Los Angles CA, 11111'}/>
+                    </div>
                 </form>
-            </div>
         )
     }
 
