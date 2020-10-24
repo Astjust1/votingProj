@@ -22,11 +22,11 @@ export default class SubmissionForm extends Component {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 display: 'flex',
-                border:'1px solid',
+                border:'1px solid #bfecb7',
                 borderRadius:'16px',
                 height: "25%",
                 width: "60%",
-                boxShadow:'5px 10px 18px #888888',
+                boxShadow:'5px 10px 12px #b7bfec',
             }}> 
                     <div>
                         <label for={'email'}> What's your email?</label>

@@ -12,7 +12,7 @@ export default class Footer extends Component {
         return(
             <div style={{
                 height:'5%',
-                backgroundColor: 'purple',
+                backgroundColor: '#ecb7bf',
                 position:'fixed',
                 width: '100%'
             }}>

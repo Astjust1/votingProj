@@ -12,7 +12,7 @@ export default class Header extends Component {
         return(
             <nav style={{
                 height:'80px',
-                backgroundColor: 'purple',
+                backgroundColor: '#ecb7bf',
                 position:'fixed',
                 width:'100%'
             }}>
