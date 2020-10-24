@@ -26,6 +26,9 @@ export const App = (props={}) => (
             display: 'flex',
             overFlowY: 'scroll'
         }} >
+        <h1>
+            Voting info for people in a rush!
+        </h1>
         <SubmissionForm/>
         {props.children}
         </div>
