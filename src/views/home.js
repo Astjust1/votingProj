@@ -19,8 +19,9 @@ export const App = (props={}) => (
         <Header/>
         <div style={{
             width: '100%',
-            height:'95%',
+            height:'75%',
             alignItems: 'center',
+            alignContent: 'space-evenly',
             flexDirection: 'column',
             justifyContent: 'center',
             display: 'flex',
